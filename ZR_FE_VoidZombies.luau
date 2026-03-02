@@ -17,7 +17,7 @@ local originalNamecall; originalNamecall = hookmetamethod(game, "__namecall", ne
 	local namecallmethod = getnamecallmethod()
 	if not checkcaller() then
 		if self.Name == "RemoteFunction" and namecallmethod == "InvokeServer" and string.find(traceback, "MeleeController", 1, true) then
-			arguments[1].Direction = Vector3.zero / 0 -- Vulnerability is here -> nan, nan, nan
+			arguments[1].Direction = Vector3.zero / 0 -- Vulnerability is here -> nan, nan, nan (You can also put a huge vector3 -> Crazy Knockback)
 		end
 	end
     setnamecallmethod(namecallmethod)
