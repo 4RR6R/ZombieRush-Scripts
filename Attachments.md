@@ -1,5 +1,7 @@
 # XP Farm
 
+<img src="https://github.com/4RR6R/ZombieRush-Scripts/blob/main/Images/XPFarm.png?raw=true" alt="Texte alternatif" width="500">
+
 # Break Round (of a cheater)
 
 ---
