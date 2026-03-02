@@ -4,6 +4,7 @@
 
     This script demonstrates a critical server-side validation flaw in the WeaponEvent damage handling system
     By sending negative hit values, it is possible to invert the damage calculation logic, effectively regenerating zombie health instead of reducing it
+	This issue will be fixed in a future update
 
     Status: Functional
 
