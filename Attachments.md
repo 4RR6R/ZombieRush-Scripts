@@ -1,6 +1,13 @@
-# XP Farm
+## XP Farm
 
-<img src="https://github.com/4RR6R/ZombieRush-Scripts/blob/main/Images/XPFarm.png?raw=true" alt="Texte alternatif" width="500">
+<img src="https://github.com/4RR6R/ZombieRush-Scripts/blob/main/Images/XPFarm.png?raw=true" width="500">
+
+## Boss HP Tamper
+
+<img src="https://github.com/4RR6R/ZombieRush-Scripts/blob/main/Images/BossHugeHP.png?raw=true" width="500">
+<img src="https://github.com/4RR6R/ZombieRush-Scripts/blob/main/Images/BossInfHP.png?raw=true" width="500">
+<img src="https://github.com/4RR6R/ZombieRush-Scripts/blob/main/Images/BossNaNHP.png?raw=true" width="500">
+
 
 # Break Round (of a cheater)
 
