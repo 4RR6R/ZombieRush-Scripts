@@ -4,7 +4,7 @@
 
     This script demonstrates a server-side velocity desynchronization issue affecting AI target prediction mechanics
     While this technique can also be used to fling zombies or players outside of the map boundaries (when playing as a zombie), that is not the primary purpose of this proof of concept
-	  This issue will be fixed in a future update
+	This issue will be fixed in a future update
 
     Status: Functional
 
