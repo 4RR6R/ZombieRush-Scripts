@@ -105,8 +105,8 @@ local function main() : () -> ()
 				Tool = tool,
 				RealTool = tool,
 				HumanoidTables = {{
-					HeadHits = 1,
-					BodyHits = zombieTarget:GetAttribute("Boss") ~= nil and -1.5 or 0,
+					HeadHits = tool:GetAttribute("Burst"),
+					BodyHits = zombieTarget:GetAttribute("Boss") ~= nil and -tool:GetAttribute("Burst") * 1.5 or 0,
 					THumanoid = zombieTarget.Humanoid,
 				}},
 				LaserProperties = table.create(tool:GetAttribute("Burst"), {
