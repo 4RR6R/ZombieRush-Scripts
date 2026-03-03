@@ -21,10 +21,8 @@ local originalNamecall; originalNamecall = hookmetamethod(game, "__namecall", ne
 	if not checkcaller() then
 		if self.Name == "WeaponEvent" and namecallmethod == "FireServer" then
 			for index in arguments[1].HumanoidTables do
-			    if arguments[1].HumanoidTables[index].THumanoid.Parent and arguments[1].HumanoidTables[index].THumanoid.Parent:GetAttribute("Boss") then
-			        arguments[1].HumanoidTables[index].HeadHits = -100000 -- Vulnerability is here -> Negative number -> Invert damage calculation
-			        arguments[1].HumanoidTables[index].BodyHits = 0
-			    end
+			    arguments[1].HumanoidTables[index].HeadHits = -1000000 -- Vulnerability is here -> Negative number -> Invert damage calculation
+			    arguments[1].HumanoidTables[index].BodyHits = 0
 			end
 		end
 	end
