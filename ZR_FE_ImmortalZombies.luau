@@ -11,10 +11,6 @@
     Created for security research and responsible disclosure purposes only
 ]]
 
-local Players = game:GetService("Players")
-
-local localPlayer = Players.LocalPlayer
-
 local originalNamecall; originalNamecall = hookmetamethod(game, "__namecall", newcclosure(function(self : Instance, ... : any) : any
 	local arguments = table.pack(...)
 	local namecallmethod = getnamecallmethod()
