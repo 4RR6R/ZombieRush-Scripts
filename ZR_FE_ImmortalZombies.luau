@@ -24,7 +24,7 @@ local originalNamecall; originalNamecall = hookmetamethod(game, "__namecall", ne
                 if damage and currentHealth then
                     local totalNeeded = currentHealth - DesiredHealth
                     arguments[1].HumanoidTables[index].HeadHits = 0
-                    arguments[1].HumanoidTables[index].BodyHits = math.min(math.round(totalNeeded / damage), -1) -- Vulnerability is here -> Negative number -> Invert damage calculation
+                    arguments[1].HumanoidTables[index].BodyHits = math.min(math.round(totalNeeded / damage), 0) -- Vulnerability is here -> Negative number -> Invert damage calculation
                 end
 			end
 		end
