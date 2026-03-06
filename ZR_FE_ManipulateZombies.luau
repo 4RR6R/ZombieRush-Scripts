@@ -17,12 +17,14 @@ local RunService = game:GetService("RunService")
 local localPlayer = Players.LocalPlayer
 
 RunService.PostSimulation:Connect(function()
-	local character = localPlayer.Character
-	local humanoidRootPart = character and character:FindFirstChild("HumanoidRootPart")
-	if humanoidRootPart then
-		local realVelocity = humanoidRootPart.AssemblyLinearVelocity
-		humanoidRootPart.AssemblyLinearVelocity = Vector3.new(math.cos(tick()), 0, math.sin(tick())) * 50 -- Vulnerability is here -> Velocity desynchronization
-		RunService.RenderStepped:Wait()
-		humanoidRootPart.AssemblyLinearVelocity = realVelocity
-	end
+    local character = localPlayer.Character
+    local humanoid = character and character:FindFirstChild("Humanoid")
+    local humanoidRootPart = character and character:FindFirstChild("HumanoidRootPart")
+    if humanoid and humanoidRootPart then
+        local realVelocity = humanoidRootPart.AssemblyLinearVelocity
+        local moveDirection = humanoid.MoveDirection
+        humanoidRootPart.AssemblyLinearVelocity = -moveDirection * Vector3.new(1, 0, 1) * 25 -- Vulnerability is here -> Velocity desynchronization
+        RunService.RenderStepped:Wait()
+        humanoidRootPart.AssemblyLinearVelocity = realVelocity
+    end
 end)
