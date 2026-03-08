@@ -17,13 +17,24 @@ local Players = game:GetService("Players")
 
 local localPlayer = Players.LocalPlayer
 
-local originalNamecall; originalNamecall = hookmetamethod(game, "__namecall", newcclosure(function(self : Instance, ... : any) : any
+local mapStorage = workspace:WaitForChild("Map Storage")
+
+local raycastParameters = RaycastParams.new()
+raycastParameters.FilterDescendantsInstances = {mapStorage}
+raycastParameters.FilterType = Enum.RaycastFilterType.Include
+
+local originalNamecall; originalNamecall = hookmetamethod(game, "__namecall", newcclosure(function(self, ...)
 	local arguments = table.pack(...)
-	local traceback = debug.traceback()
 	local namecallmethod = getnamecallmethod()
 	if not checkcaller() then
-		if self.Name == localPlayer.Name .. "Nade" and namecallmethod == "FireServer" then
-			arguments[1].DirectionVector = "Totally_Not_A_Vector" -- Vulnerability was here -> Invalid argument 
+        if self.Name == localPlayer.Name .. "Nade" and namecallmethod == "FireServer" then
+            local character = localPlayer.Character
+            local humanoidRootPart = character and character:FindFirstChild("HumanoidRootPart")
+            if humanoidRootPart then
+                local raycastResult = workspace:Raycast(humanoidRootPart.Position, -Vector3.yAxis * 1000, raycastParameters)
+                arguments[1].StartPosition = raycastResult.Instance ~= nil and raycastResult.Position - Vector3.yAxis * 5 or arguments[1].StartPosition
+                arguments[1].DirectionVector = Vector3.zero
+            end
 		end
 	end
 	setnamecallmethod(namecallmethod)
