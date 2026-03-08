@@ -11,7 +11,7 @@
     Created for security research and responsible disclosure purposes only
 ]]
 
-getgenv().DesiredHealth = 6767676720
+getgenv().DesiredHealth = math.huge
 
 local originalNamecall; originalNamecall = hookmetamethod(game, "__namecall", newcclosure(function(self : Instance, ... : any) : any
 	local arguments = table.pack(...)
