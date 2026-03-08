@@ -49,13 +49,9 @@ You can clear them instantly using a browser script instead of unblocking them m
 
 1. Go to the Roblox website in your web browser.
 2. Open the Developer Console (F12 or Right Click > Inspect > Console).
-3. Paste the command below and hit Enter:
+3. Paste the source code below and hit Enter:
 
-```javascript
-fetch("https://raw.githubusercontent.com/4RR6R/ZR-Scripts/refs/heads/main/ServerHop/Unblocker.js")
-.then(response => response.text())
-.then(eval);
-```
+[Unblocker.js](https://raw.githubusercontent.com/4RR6R/ZR-Scripts/refs/heads/main/ServerHope/Unblocker.js)
 
 The script will iterate through your settings and unblock the users automatically.
 
@@ -76,4 +72,3 @@ By following this strategy, you should experience:
 
 - This method relies on standard matchmaking behavior.
 - The unblocker script runs locally in your browser to automate button clicks.
-- You can view the raw source code here: [Unblocker.js](https://raw.githubusercontent.com/4RR6R/ZR-Scripts/refs/heads/main/ServerHope/Unblocker.js)
