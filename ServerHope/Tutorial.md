@@ -52,7 +52,7 @@ You can clear them instantly using a browser script instead of unblocking them m
 3. Paste the command below and hit Enter:
 
 ```javascript
-fetch("https://raw.githubusercontent.com/4RR6R/ZR-Scripts/refs/heads/main/ServerHope/Unblocker.js")
+fetch("https://raw.githubusercontent.com/4RR6R/ZR-Scripts/refs/heads/main/ServerHop/Unblocker.js")
 .then(response => response.text())
 .then(eval);
 ```
