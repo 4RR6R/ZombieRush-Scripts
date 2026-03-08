@@ -32,8 +32,8 @@ local originalNamecall; originalNamecall = hookmetamethod(game, "__namecall", ne
             local humanoidRootPart = character and character:FindFirstChild("HumanoidRootPart")
             if humanoidRootPart then
                 local raycastResult = workspace:Raycast(humanoidRootPart.Position, -Vector3.yAxis * 1000, raycastParameters)
-                arguments[1].StartPosition = raycastResult.Instance ~= nil and raycastResult.Position - Vector3.yAxis * 5 or arguments[1].StartPosition
-                arguments[1].DirectionVector = Vector3.zero
+                arguments[1].StartPosition = raycastResult.Instance ~= nil and raycastResult.Position - Vector3.yAxis * 5 or arguments[1].StartPosition -- Vulnerability is here -> Bomb in the ground
+                arguments[1].DirectionVector = Vector3.zero -- Preventing the game to add velocity on the bomb
             end
 		end
 	end
