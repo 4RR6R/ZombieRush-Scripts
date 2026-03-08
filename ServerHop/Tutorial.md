@@ -49,7 +49,7 @@ You can clear them instantly using a browser script instead of unblocking them m
 
 1. Go to the Roblox website in your web browser.
 2. Open the Developer Console (F12 or Right Click > Inspect > Console).
-3. Paste this [code](https://raw.githubusercontent.com/4RR6R/ZR-Scripts/refs/heads/main/ServerHope/Unblocker.js) and hit Enter:
+3. Paste this [code](https://raw.githubusercontent.com/4RR6R/ZR-Scripts/refs/heads/main/ServerHop/Unblocker.js) and hit Enter:
 
 The script will iterate through your settings and unblock the users automatically.
 
