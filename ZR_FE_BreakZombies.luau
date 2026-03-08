@@ -6,6 +6,7 @@
     Consequently, the grenade is successfully thrown but never detonates
     This behavior is especially disruptive for attraction-type grenades (Pipe Bomb, Can-O-Beans) that draw zombies toward their location, as affected zombies will remain indefinitely gathered around a grenade that no longer functions
 	In other words, zombies will never hunt you again, and you can consider yourself invincible and able to reach waves that are virtually unattainable even with the nuke launcher and ban hammer
+ 	This issue will be fixed in a future update
 
     Status: Functional
 
