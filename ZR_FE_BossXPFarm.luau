@@ -105,8 +105,11 @@ local function main() : () -> ()
 				Tool = tool,
 				RealTool = tool,
 				HumanoidTables = {{
+					-- We make sure that the zombie will take damage to gain XP by sending a positive amount of hits
 					HeadHits = tool:GetAttribute("Burst"),
+					-- We send a negative amount of hits to compensate and prevent the zombie from taking damage
 					BodyHits = zombieTarget:GetAttribute("Boss") ~= nil and -tool:GetAttribute("Burst") * 1.5 or 0,
+					-- This way, the zombie won't take any damage, but you'll still earn XP for hitting it
 					THumanoid = zombieTarget.Humanoid,
 				}},
 				LaserProperties = table.create(tool:GetAttribute("Burst"), {
