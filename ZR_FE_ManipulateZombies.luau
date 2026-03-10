@@ -23,7 +23,7 @@ RunService.PostSimulation:Connect(function()
     if humanoid and humanoidRootPart then
         local realVelocity = humanoidRootPart.AssemblyLinearVelocity
         local moveDirection = humanoid.MoveDirection
-        humanoidRootPart.AssemblyLinearVelocity = -moveDirection * Vector3.new(1, 0, 1) * humanoid.WalkSpeed -- Vulnerability is here -> Velocity desynchronization
+        humanoidRootPart.AssemblyLinearVelocity = -moveDirection * Vector3.new(1, 0, 1) * humanoid.WalkSpeed / 5 -- Vulnerability is here -> Velocity desynchronization
         RunService.RenderStepped:Wait()
         humanoidRootPart.AssemblyLinearVelocity = realVelocity
     end
