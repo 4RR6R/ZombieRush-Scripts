@@ -6,7 +6,7 @@
     This allows manipulation of damage attribution logic, potentially enabling unintended XP gain without properly reducing boss health
 	This issue will be fixed in a future update
 
-    Status: Functional
+    Status: Patched
 
     Created for security research and responsible disclosure purposes only
 ]]
