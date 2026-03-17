@@ -5,7 +5,7 @@
     This script demonstrates a server-side validation issue related to weapon state handling that can affect zombie AI behavior
     This issue will be fixed in a future update
 
-	Status: Functional
+	Status: Patched
 
     Created for security research and responsible disclosure purposes only
 ]]
