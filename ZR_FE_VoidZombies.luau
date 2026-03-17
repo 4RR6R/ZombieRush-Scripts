@@ -6,7 +6,7 @@
     Specifically, when using the Ban Hammer, this vulnerability allows players to be invalidated (voided) due to improper server-side validation of combat parameters
     This issue will be fixed in a future update
 
-    Status: Functional
+    Status: Patched
 
     Created for security research and responsible disclosure purposes only
 ]]
