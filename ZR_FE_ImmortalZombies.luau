@@ -6,7 +6,7 @@
     By sending negative hit values, it is possible to invert the damage calculation logic, effectively regenerating zombie health instead of reducing it
 	This issue will be fixed in a future update
 
-    Status: Functional
+    Status: Patched
 
     Created for security research and responsible disclosure purposes only
 ]]
