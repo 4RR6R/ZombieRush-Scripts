@@ -1,5 +1,5 @@
 --[[
-    Zombie Rush HardcoreBypass
+    Zombie Rush Vulnerability Report
     Discovered by 4RR6R
 
     This script demonstrates a method to directly access the Hardcore game instance (PlaceID: 4301323950)
